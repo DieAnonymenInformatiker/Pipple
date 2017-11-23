@@ -1,0 +1,3 @@
+C:\Users\torbe\Source\Repos\Pipple\Pipple\Source\Pipple\Pipple.Build.cs
+C:\Users\torbe\Source\Repos\Pipple\Pipple\Source\Pipple.Target.cs
+C:\Users\torbe\Source\Repos\Pipple\Pipple\Source\PippleEditor.Target.cs

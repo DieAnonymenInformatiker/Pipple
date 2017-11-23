@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Pipple.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{68750AEF-25BE-4D31-AE68-39591014DF7C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Pipple.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\PippleEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{96457F48-6818-4781-B10B-7A3AF3E768D6}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Pipple">
+			<UniqueIdentifier>{161FA0A5-57BE-4D8B-A42D-A55B4E825447}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Pipple\Pipple.Build.cs">
+			<Filter>Source\Pipple</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Pipple\Pipple.cpp">
+			<Filter>Source\Pipple</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Pipple\Pipple.h">
+			<Filter>Source\Pipple</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Pipple\PippleGameModeBase.cpp">
+			<Filter>Source\Pipple</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Pipple\PippleGameModeBase.h">
+			<Filter>Source\Pipple</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
