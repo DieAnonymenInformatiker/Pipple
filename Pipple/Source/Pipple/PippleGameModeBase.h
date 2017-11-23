@@ -14,7 +14,7 @@ class PIPPLE_API APippleGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
-	
-	
+	// Allows us to print a log message to the screen when gameplay begins
+	virtual void StartPlay() override;
 	
 };
