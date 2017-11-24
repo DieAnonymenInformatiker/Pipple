@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodePipple_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Pipple",
 				PKG_CompiledIn | 0x00000000,
-				0x08FCD6C1,
-				0x89E86FBA,
+				0x2DAB38BC,
+				0xA18E03C8,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

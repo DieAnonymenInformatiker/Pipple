@@ -413,6 +413,8 @@
 		<None Include="..\..\Config\DefaultEditor.ini" />
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
+		<ClCompile Include="..\..\Source\Pipple\MainCharakter.cpp" />
+		<ClInclude Include="..\..\Source\Pipple\MainCharakter.h" />
 		<None Include="..\..\Source\Pipple\Pipple.Build.cs" />
 		<ClCompile Include="..\..\Source\Pipple\Pipple.cpp" />
 		<ClInclude Include="..\..\Source\Pipple\Pipple.h" />

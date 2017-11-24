@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\Pipple.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{BCDB91D3-1A2E-4714-A000-DE7FB40541A6}</UniqueIdentifier>
+			<UniqueIdentifier>{87ECCF7F-C818-4E52-9D39-5A935E984D67}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Pipple.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{8EE3FE1E-3264-4575-BC99-2EC22D08E226}</UniqueIdentifier>
+			<UniqueIdentifier>{C98D91C3-A35F-4A02-A0D8-4C88103671F8}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,8 +25,14 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\Pipple">
-			<UniqueIdentifier>{BCFB79A5-7D1E-4A26-8CB0-4AF777BE6655}</UniqueIdentifier>
+			<UniqueIdentifier>{43E45CE3-C4D8-40D8-961E-9818B2B965B9}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\Pipple\MainCharakter.cpp">
+			<Filter>Source\Pipple</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Pipple\MainCharakter.h">
+			<Filter>Source\Pipple</Filter>
+		</ClInclude >
 		<None Include="..\..\Source\Pipple\Pipple.Build.cs">
 			<Filter>Source\Pipple</Filter>
 		</None >
