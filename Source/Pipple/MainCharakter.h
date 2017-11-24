@@ -11,6 +11,7 @@ class PIPPLE_API AMainCharakter : public ACharacter
 {
 	GENERATED_BODY()
 
+
 public:
 	// Sets default values for this character's properties
 	AMainCharakter();
