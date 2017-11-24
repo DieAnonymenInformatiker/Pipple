@@ -33,6 +33,14 @@ void AMainCharakter::Tick(float DeltaTime)
 void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	PlayerInputComponent->BindAxis("MoveForward", this, &AMainCharakter::MoveForward);
 
 }
 
+
+
+
+void AMainCharakter::MoveForward(float Value) {
+	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
+	AddMovementInput(Direction, Value);
+}
