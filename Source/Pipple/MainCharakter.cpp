@@ -34,7 +34,8 @@ void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMainCharakter::MoveForward);
-
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMainCharakter::StartJump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMainCharakter::StopJump);
 }
 
 
@@ -43,4 +44,12 @@ void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 void AMainCharakter::MoveForward(float Value) {
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 	AddMovementInput(Direction, Value);
+}
+
+void AMainCharakter::StartJump() {
+	bPressedJump = true;
+}
+
+void AMainCharakter::StopJump() {
+	bPressedJump = false;
 }

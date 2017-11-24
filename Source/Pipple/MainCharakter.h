@@ -31,6 +31,12 @@ public:
 	UFUNCTION()
 		void MoveForward(float Value);
 
+	UFUNCTION()
+		void StartJump();
+
+	UFUNCTION()
+		void StopJump();
+
 	
 	
 };
