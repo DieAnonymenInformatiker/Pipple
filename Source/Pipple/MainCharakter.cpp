@@ -26,6 +26,14 @@ void AMainCharakter::BeginPlay()
 void AMainCharakter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	const FVector CurrentPosition = GetActorLocation();
+	if (CurrentPosition.Z < -10.0f) {
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("U FAILED"));
+		FVector StartPosition =  FVector(0.0, 0.0, 112.0);
+		SetActorLocation(StartPosition, false);
+	}
+	
+	
 
 }
 
