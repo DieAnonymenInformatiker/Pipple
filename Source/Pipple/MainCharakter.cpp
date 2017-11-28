@@ -50,8 +50,14 @@ void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 
 void AMainCharakter::MoveForward(float Value) {
+	movementSpeed += (Value * 0.005);
+	if (Value == 0)
+		movementSpeed *= 0.9;
+
+	FString movementOutput = FString::SanitizeFloat(movementSpeed);
+	if (movementSpeed != 0.0) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, *movementOutput);
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
-	AddMovementInput(Direction, Value);
+	AddMovementInput(Direction, movementSpeed);
 }
 
 void AMainCharakter::StartJump() {
