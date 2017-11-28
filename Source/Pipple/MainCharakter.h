@@ -38,6 +38,8 @@ public:
 	UFUNCTION()
 		void StopJump();
 
+private:
+	float movementSpeed = 0.0;
 	
 	
 };
