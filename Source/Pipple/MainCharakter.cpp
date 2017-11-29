@@ -44,13 +44,15 @@ void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMainCharakter::MoveForward);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMainCharakter::StartJump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMainCharakter::StopJump);
-	PlayerInputComponent->BindAxis("UseFloatingPower", this, &AMainCharakter::FloatingPower);
+	PlayerInputComponent->BindAction("UseFloatingPower",IE_Pressed, this, &AMainCharakter::FloatingPower);
+	PlayerInputComponent->BindAction("UseFloatingPower", IE_Repeat, this, &AMainCharakter::FloatingPower);
 }
 
 
-void AMainCharakter::FloatingPower(float Value) {
-	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Z);
-	AddMovementInput(Direction, Value);
+void AMainCharakter::FloatingPower() {
+	FVector pos = GetActorLocation();
+	pos.Z += 40;
+	AMainCharakter::SetActorLocation(pos, false);
 
 }
 
