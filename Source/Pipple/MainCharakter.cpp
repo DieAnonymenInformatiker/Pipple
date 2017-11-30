@@ -51,21 +51,39 @@ void AMainCharakter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 void AMainCharakter::FloatingPower() {
 	FVector pos = GetActorLocation();
-	pos.Z += 40;
+	pos.Z += 15;
+	AMainCharakter::SetActorLocation(pos, false);
+	pos.Z += 15;
 	AMainCharakter::SetActorLocation(pos, false);
 
 }
 
+bool RightDirection = true;
 
 void AMainCharakter::MoveForward(float Value) {
-	movementSpeed += (Value * 0.005);
+	movementSpeed += (Value * 0.05);
 	if (Value == 0)
 		movementSpeed *= 0.9;
 
-	FString movementOutput = FString::SanitizeFloat(movementSpeed);
-	if (movementSpeed != 0.0) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, *movementOutput);
+	//FString movementOutput = FString::SanitizeFloat(movementSpeed);
+	//if (movementSpeed != 0.0) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, *movementOutput);
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 	AddMovementInput(Direction, movementSpeed);
+	if (Value < 0) {
+		if (RightDirection == true) {
+			FRotator CurrentRotation = GetActorRotation();
+			CurrentRotation.Pitch += 180;
+			SetActorRotation(CurrentRotation);
+			RightDirection = false;
+		}
+		else
+			if (RightDirection == false) {
+				FRotator CurrentRotation = GetActorRotation();
+				CurrentRotation.Pitch += 180;
+				SetActorRotation(CurrentRotation);
+				RightDirection = true;
+			}
+	}
 }
 
 void AMainCharakter::StartJump() {
