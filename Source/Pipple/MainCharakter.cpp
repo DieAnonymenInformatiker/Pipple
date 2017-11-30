@@ -83,6 +83,7 @@ void AMainCharakter::MoveForward(float Value) {
 				SetActorRotation(CurrentRotation);
 				RightDirection = true;
 			}
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, RightDirection);
 	}
 }
 
